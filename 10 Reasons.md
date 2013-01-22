@@ -4,7 +4,7 @@
 1. Erfahre die Schönheit sofort
 -------------------------------
 
-[Try CofeeScript](http://coffeescript.org)
+[Try CoffeeScript](http://coffeescript.org)
 
 
 2. Keine peinliche Klammern, Semikolons und “vars”
