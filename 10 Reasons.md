@@ -177,16 +177,15 @@ alert("" + elvis + " says: " + quote);
 ```
 
 6. Varargs
------------------------
+----------
+
 ```coffeescript
 foo = (first, second, others...) ->
- alert("First entry: "+first)
- alert("Second entry: "+second)
- alert("Rest: "+other) for other in others
+  alert "First entry: #{first}"
+  alert "Second entry: #{second}"
+  alert "Rest: #{other}" for other in others
 
-
-foo("Ted","Bob","Jim","Suzie","Blob")
-
+foo 'Ted', 'Bob', 'Jim', 'Suzie', 'Blob'
 ```
 
 compiles to
@@ -208,18 +207,18 @@ foo = function() {
   return _results;
 };
 
-foo("Ted", "Bob", "Jim", "Suzie", "Blob");
+foo('Ted', 'Bob', 'Jim', 'Suzie', 'Blob');
 ```
 
 7. Sexy loops with index and filterings
------------------------
+---------------------------------------
+
 ```coffeescript
 alert bob for bob in ['Bob', 'Bobb', 'Bobby']
 
-alert("I am bob #"+i+": "+bob) for bob,i in ['Bob', 'Bobb', 'Bobby']
+alert "I am bob ##{i}: #{bob}" for bob,i in ['Bob', 'Bobb', 'Bobby']
 
 alert bob for bob in ['Bob', 'Bobb', 'Bobby'] when bob isnt 'Bobb'
-
 ```
 
 compiles to
@@ -249,7 +248,8 @@ for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
 ```
 
 8. Multiline Strings and HTML
------------------------
+-----------------------------
+
 ```coffeescript
 html = """
 <div class="content">
