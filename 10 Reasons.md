@@ -105,7 +105,56 @@ changeNumbers = function() {
 inner = changeNumbers();
 ```
 
-4. String Concatenation
+4. Classes for real™
+--------------------
+
+```coffeescript
+class Dog
+  dogName: 'fido'
+
+  constructor: (@dogName) ->
+
+  # Public
+  doStuff: ->
+    alert 'The dog is walking'
+
+    return
+
+  sayHi: ->
+    sayHello.call @
+
+    return
+
+  # Private
+  sayHello = ->
+    alert "Hi! I'm #{@dogName}"
+
+    return
+
+ralph = new Dog 'ralph'
+do ralph.doStuff
+# do ralph.sayHello # Fail
+
+bob = new Dog 'bob'
+do bob.doStuff
+do bob.sayHi #Fail
+
+class @AwesomeModel extends Backbone.Model
+  defaults: {
+    # ...
+  }
+
+  clear: -> # Remove from collection
+    do @.destroy
+
+class @AwesomeCollection extends Backbone.Collection
+  model: AwesomeModel
+
+class @AwesomeView extends Backbone.View
+
+```
+
+5. String Concatenation
 -----------------------
 
 ```coffeescript
