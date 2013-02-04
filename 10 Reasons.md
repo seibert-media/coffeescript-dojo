@@ -175,3 +175,38 @@ quote = 'Man, I really like Vegas.';
 
 alert("" + elvis + " says: " + quote);
 ```
+
+6. Varargs
+-----------------------
+```coffeescript
+foo = (first, second, others...) ->
+ alert("First entry: "+first)
+ alert("Second entry: "+second)
+ alert("Rest: "+other) for other in others
+
+
+foo("Ted","Bob","Jim","Suzie","Blob")
+
+```
+
+compiles to
+
+```javascript
+var foo,
+  __slice = [].slice;
+
+foo = function() {
+  var first, other, others, second, _i, _len, _results;
+  first = arguments[0], second = arguments[1], others = 3 <= arguments.length ? __slice.call(arguments, 2) : [];
+  alert("First entry: " + first);
+  alert("Second entry: " + second);
+  _results = [];
+  for (_i = 0, _len = others.length; _i < _len; _i++) {
+    other = others[_i];
+    _results.push(alert("Rest: " + other));
+  }
+  return _results;
+};
+
+foo("Ted", "Bob", "Jim", "Suzie", "Blob");
+```
