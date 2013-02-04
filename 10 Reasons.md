@@ -137,7 +137,7 @@ do ralph.doStuff
 
 bob = new Dog 'bob'
 do bob.doStuff
-do bob.sayHi #Fail
+do bob.sayHi
 
 class @AwesomeModel extends Backbone.Model
   defaults: {
