@@ -210,3 +210,40 @@ foo = function() {
 
 foo("Ted", "Bob", "Jim", "Suzie", "Blob");
 ```
+
+7. Sexy loops with index and filterings
+-----------------------
+```coffeescript
+alert bob for bob in ['Bob', 'Bobb', 'Bobby']
+
+alert("I am bob #"+i+": "+bob) for bob,i in ['Bob', 'Bobb', 'Bobby']
+
+alert bob for bob in ['Bob', 'Bobb', 'Bobby'] when bob isnt 'Bobb'
+
+```
+
+compiles to
+
+```javascript
+var bob, i, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2;
+
+_ref = ['Bob', 'Bobb', 'Bobby'];
+for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+  bob = _ref[_i];
+  alert(bob);
+}
+
+_ref1 = ['Bob', 'Bobb', 'Bobby'];
+for (i = _j = 0, _len1 = _ref1.length; _j < _len1; i = ++_j) {
+  bob = _ref1[i];
+  alert("I am bob #" + i + ": " + bob);
+}
+
+_ref2 = ['Bob', 'Bobb', 'Bobby'];
+for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
+  bob = _ref2[_k];
+  if (bob !== 'Bobb') {
+    alert(bob);
+  }
+}
+```
