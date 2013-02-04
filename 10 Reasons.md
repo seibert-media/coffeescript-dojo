@@ -247,3 +247,21 @@ for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
   }
 }
 ```
+
+8. Multiline Strings and HTML
+-----------------------
+```coffeescript
+html = """
+<div class="content">
+  You have got <span class="sum">20</span> new emails
+</div>
+"""
+```
+
+compiles to
+
+```javascript
+var html;
+
+html = "<div class=\"content\">\n  You have got <span class=\"sum\">20</span> new emails\n</div>";
+```
