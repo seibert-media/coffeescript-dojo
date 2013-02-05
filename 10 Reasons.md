@@ -265,3 +265,37 @@ var html;
 
 html = "<div class=\"content\">\n  You have got <span class=\"sum\">20</span> new emails\n</div>";
 ```
+
+9. “Automatic” return value
+---------------------------
+
+```coffeescript
+bob = ->
+  'Bob'
+
+bob123 = ->
+  123
+
+speakBob = ->
+  alert 'Hi, i am “Bob”'
+
+  return
+```
+
+compiles to
+
+```javascript
+var bob, bob123, speakBob;
+
+bob = function() {
+  return 'Bob';
+};
+
+bob123 = function() {
+  return 123;
+};
+
+speakBob = function() {
+  alert('Hi, i am “Bob”');
+};
+```
