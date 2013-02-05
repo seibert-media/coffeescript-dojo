@@ -10,8 +10,6 @@
 2. Keine peinliche Klammern, Semikolons und “vars”
 --------------------------------------------------
 
-[Try]("http://coffeescript.org/#try:%23%20Objects%20and%20Arrays%0Amath%20%3D%0A%20%20root%3A%20%20%20Math.sqrt%0A%20%20square%3A%20square%0A%20%20cube%3A%20%20%20(x)%20-%3E%20x%20*%20square%20x%0A%0Akids%20%3D%0A%20%20brother%3A%0A%20%20%20%20name%3A%20'Max'%0A%20%20%20%20age%3A%20%2011%0A%20%20sister%3A%0A%20%20%20%20name%3A%20'Ida'%0A%20%20%20%20age%3A%20%209%0A%0Abitlist%20%3D%20%5B%0A%20%201%2C%200%2C%201%0A%20%200%2C%200%2C%201%0A%20%201%2C%201%2C%200%0A%5D%0A%0A%23%20Functions%0Asquare%20%3D%20(x)%20-%3E%20x%20*%20x%0A%0Aalert%20'Man%2C%20I%20really%20like%20Vegas.'%20if%20elvis%3F%0A%0Ado%20foobar")
-
 ```coffeescript
 # Objects and Arrays
 math =
