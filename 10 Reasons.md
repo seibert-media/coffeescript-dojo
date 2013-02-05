@@ -154,29 +154,7 @@ class @AwesomeView extends Backbone.View
 
 ```
 
-5. String Concatenation
------------------------
-
-```coffeescript
-elvis = 'The King'
-quote = 'Man, I really like Vegas.'
-
-alert "#{elvis} says: #{quote}"
-```
-
-compiles to
-
-```javascript
-var elvis, quote;
-
-elvis = 'The King';
-
-quote = 'Man, I really like Vegas.';
-
-alert("" + elvis + " says: " + quote);
-```
-
-6. Varargs
+5. Varargs
 ----------
 
 ```coffeescript
@@ -210,7 +188,7 @@ foo = function() {
 foo('Ted', 'Bob', 'Jim', 'Suzie', 'Blob');
 ```
 
-7. Sexy loops with index and filterings
+6. Sexy loops with index and filterings
 ---------------------------------------
 
 ```coffeescript
@@ -245,6 +223,28 @@ for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
     alert(bob);
   }
 }
+```
+
+7. String Concatenation
+-----------------------
+
+```coffeescript
+elvis = 'The King'
+quote = 'Man, I really like Vegas.'
+
+alert "#{elvis} says: #{quote}"
+```
+
+compiles to
+
+```javascript
+var elvis, quote;
+
+elvis = 'The King';
+
+quote = 'Man, I really like Vegas.';
+
+alert("" + elvis + " says: " + quote);
 ```
 
 8. Multiline Strings and HTML
