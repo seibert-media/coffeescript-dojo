@@ -299,3 +299,30 @@ speakBob = function() {
   alert('Hi, i am “Bob”');
 };
 ```
+
+10. the Fat Arrow Operator
+---------------------------
+
+```coffeescript
+absinth =
+  iAmDrunk: false
+  drink: ->
+    $('.bottle a').on 'click', =>
+      @iAmDrunk = true
+```
+
+compiles to
+
+```javascript
+var absinth;
+
+absinth = {
+  iAmDrunk: false,
+  drink: function() {
+    var _this = this;
+    return $('.bottle a').on('click', function() {
+      return _this.iAmDrunk = true;
+    });
+  }
+};
+```
