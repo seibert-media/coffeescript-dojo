@@ -300,7 +300,7 @@ speakBob = function() {
 };
 ```
 
-10. the Fat Arrow Operator
+10. The Fat Arrow Operator
 ---------------------------
 
 ```coffeescript
